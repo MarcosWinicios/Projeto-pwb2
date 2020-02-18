@@ -213,9 +213,9 @@ body {
     grid-template-areas: 
       "menu"
       "header"
+      "highlights"
       "text"
       "testimonials"
-      "highlights"
       "footer"
     ;
   }
