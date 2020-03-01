@@ -11,21 +11,47 @@ a{
 #grid-container{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 60px 400px 150px auto 300px 70px;
+    grid-template-rows: 60px 400px auto 300px 70px;
     grid-template-areas: 
         "menu"
         "input"
-        "titulo"
-        "text"
+        "conteudo"
         "sugestoes"
         "footer"
     ;
 }
+
+#main-conteudo{
+    grid-area: conteudo;
+}
+
+#conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#text{
+   margin: 100px;
+}
+
+
+#main-text{
+    width: 1500px;
+    margin-left: 100px;
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 25px;
+    padding-bottom: 100px;
+    
+}
+
 #nav-menu{
     width: 800px;
     float: right;
     
 }
+
 
 #main-sugestoes{
     grid-area: sugestoes;
@@ -33,12 +59,10 @@ a{
 } 
 #main-sugestoes .topico{
     margin-left: 50px;
-    margin-bottom: 0;
-    position: relative;
+    margin-bottom: 0; 
 }
 #sugestoes-container{ /*Propriedades do Flex-Box*/
     display: flex;
-    
 }
 #sugestoes-container div{
     padding: 20px;
@@ -89,7 +113,8 @@ a{
     background-position: center  center;
 } 
 
-#busca{ 
+#busca{
+    position: relative;
     top: 50px;
     left: 50px;
     display: flex;
@@ -101,45 +126,28 @@ a{
 }
 
 #text-pesquisa{
-
     font-style: italic;
     font-weight: bold;
     font-size: 50px;
     text-align: left;
-    color: #161616fd;
+    
 }
-#text-pesquisa span{
-    text-align: left;
-}
+
 #input-pesquisa input{
     height: 45px;
     width:  800px;
     border-radius: 10px;
     border-style: solid;
-    
+    background-color: #ffffff;
 }
 
-#titulo-conteudo{
-    grid-area: titulo;
-    text-align: left;
-    margin-left: 50px;
-    
-}
 .topico{
     font-weight: bold;
     font-size: 50px;
+    color: #161616fd;
 }
 
-#main-text{
-    grid-area: text;
 
-    width: 1000px;
-    margin-left: 100px;
-    text-align: justify;
-    line-height: 1.7;
-    font-size: 25px;
-    
-}
 
 #main-footer{
     grid-area: footer;
