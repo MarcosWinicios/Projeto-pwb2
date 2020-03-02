@@ -2,7 +2,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-
 }
 a{
     text-decoration: none;
@@ -31,24 +30,16 @@ a{
     align-items: center;
     justify-content: center;
 }
-#text{
-   margin: 100px;
-}
+
 
 
 #main-text{
-    width: 1500px;
-    margin-left: 100px;
+    width: 1200px;
+    margin: 100px;
     text-align: justify;
     line-height: 1.7;
     font-size: 25px;
-    padding-bottom: 100px;
-    
-}
-
-#nav-menu{
-    width: 800px;
-    float: right;
+    padding:0 100px 100px 100px;
     
 }
 
@@ -69,39 +60,46 @@ a{
     flex-grow: 1;
     margin: 50px;
     font-weight: bold;
-    height: 50px;
+    height: 80px;
     border-radius: 10px;
     background-color: #ffffff;
     text-align: center;
-   
 }
 #sugestoes-container div p{
     font-size: 25px;
-    margin-top: 0;
+
 }
 #sugestoes-container div a:hover{
     color: #000000;
 }
-#main-menu{
+#nav-menu{
     grid-area: menu;
     background-color: #84849b;
-    padding: 13px 5px 10px 5px;
-    position: relative;
+    top: 0; 
+    
 }
 
-
-#main-menu a{
-    font-size: 25px;
+#nav-menu ul {
+    font-size: 15px; 
+    text-align:center;
+    margin-right: 0;
+    
+}
+#nav-menu ul li {
+    display: inline; 
+    margin-left: 100px;
+}
+#nav-menu ul li a {
+    margin: 0 auto;
+    font-size: 30px;
     text-decoration: none;
-    margin-right: 35px;
     color: #ffffff;
-    font-weight: bold;
-    padding: 3px;
+    font-weight: bold;  
 }
-#main-menu a:hover{
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 5px;
+
+#nav-menu ul li a:hover{
+    padding-bottom: 20px;
+    border-bottom: 5px solid #fff;  
 }
 
 #main-busca{
@@ -115,22 +113,18 @@ a{
 
 #busca{
     position: relative;
-    top: 50px;
-    left: 50px;
+    top: 100px;
     display: flex;
     flex-direction: column;
     height: 300px;
-}
-#main-busca div{
-    margin: 10px;
+    padding-left: 50px;
 }
 
 #text-pesquisa{
     font-style: italic;
     font-weight: bold;
     font-size: 50px;
-    text-align: left;
-    
+    text-align: left; 
 }
 
 #input-pesquisa input{
@@ -149,14 +143,134 @@ a{
 
 
 
-#main-footer{
+footer{
     grid-area: footer;
     background-color: #424281;   
-   
+    position: relative;
 }
 footer p{
     font-weight: bold;
     text-align: center;
     color: #fff;
     font-size: 20px;
+}
+
+@media (max-width: 1000px){
+    #grid-container{ 
+        display: grid;
+        grid-template-rows: auto 300px auto auto 70px;
+        grid-template-areas: 
+            "menu"
+            "input"
+            "conteudo"
+            "sugestoes"
+            "footer"
+        ;
+    }
+
+    #main-busca{
+        grid-area: input;
+        box-shadow: 10px 20px 30px -12px #ccc; 
+        background-image: url(Imagem_header.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center  center;
+    } 
+    
+    #busca{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    
+    #main-text{
+        margin: 10px 10px 10px 10px;
+        text-align: justify;
+        line-height: 1.7;
+        font-size: 25px;
+        padding: 15px;
+        width: auto;
+    }
+
+    #sugestoes-container{ /*Propriedades do Flex-Box*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+        height: 500px;
+    }
+    #sugestoes-container div{
+        padding: 20px;
+        flex-grow: 1;
+        margin: 0 0 20px 0;
+        font-weight: bold;
+    
+        border-radius: 10px;
+        background-color: #ffffff;
+        text-align: center;
+        width: 400px;
+    
+       
+    }
+    
+    #main-sugestoes .topico{
+        margin-left: 0px;
+        margin-bottom: 50px; 
+        text-align: center;
+        
+    }
+
+
+    #sugestoes-container div p{
+        font-size: 35px;  
+    }
+
+    #input-pesquisa input{
+        height: 35px;
+        width:  400px;
+        border-radius: 10px;
+        border-style: solid;
+        background-color: #ffffff;
+    }
+    #nav-menu ul{
+       padding-left: 0;
+    }
+
+    #sobre{
+        border-top: 1px  solid #000;
+        border-bottom: 1px  solid #000;
+    }
+
+    #nav-menu ul li {
+       display: block;
+       margin: 0;
+       position: relative;
+       width: 100%;
+    }
+
+    #nav-menu ul li a {
+        border: 5px solid #0000; 
+        margin: 0 auto;
+        font-size: 50px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold; 
+        padding: 25px;
+
+    }
+    #nav-menu ul li a:hover{
+        color: black;
+    }
+
+    #conteudo h1{
+        font-size: 40px;
+    }
+
+    
 }
