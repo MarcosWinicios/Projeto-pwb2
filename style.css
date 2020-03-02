@@ -250,13 +250,12 @@ footer p{
     #nav-menu ul li {
        display: block;
        margin: 0;
-       position: relative;
        width: 100%;
     }
 
     #nav-menu ul li a {
         border: 5px solid #0000; 
-        margin: 0 auto;
+        
         font-size: 50px;
         text-decoration: none;
         color: #ffffff;
