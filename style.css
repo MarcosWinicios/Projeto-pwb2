@@ -34,8 +34,8 @@ a{
 
 
 #main-text{
-    width: 1200px;
-    margin: 100px;
+    width: 1000px;
+   /* margin: 100px;*/
     text-align: justify;
     line-height: 1.7;
     font-size: 25px;
@@ -129,7 +129,7 @@ a{
 
 #input-pesquisa input{
     height: 45px;
-    width:  800px;
+    width:  600px;
     border-radius: 10px;
     border-style: solid;
     background-color: #ffffff;
@@ -178,14 +178,13 @@ footer p{
     } 
     
     #busca{
-        width: auto;
-        display: flex;
+        width: 500px;
         flex-direction: column;
-        height: 200px;
-        align-items: center;
-        justify-content: center;
-        
+        height: 200px; 
+        justify-content: left;
+        padding-left: 25px;
     }
+    
 
     
     #main-text{
@@ -201,8 +200,6 @@ footer p{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        
         height: 500px;
     }
     #sugestoes-container div{
@@ -210,11 +207,10 @@ footer p{
         flex-grow: 1;
         margin: 0 0 20px 0;
         font-weight: bold;
-    
         border-radius: 10px;
         background-color: #ffffff;
         text-align: center;
-        width: 400px;
+        width: 300px;
     
        
     }
