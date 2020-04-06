@@ -98,8 +98,7 @@ a{
 }
 
 #nav-menu ul li a:hover{
-    padding-bottom: 20px;
-    border-bottom: 5px solid #fff;  
+    color: #000; 
 }
 
 #main-busca{
@@ -250,17 +249,13 @@ footer p{
     }
 
     #nav-menu ul li a {
-        border: 5px solid #0000; 
-        
+        border: 5px solid #0000;   
         font-size: 50px;
         text-decoration: none;
         color: #ffffff;
         font-weight: bold; 
         padding: 25px;
 
-    }
-    #nav-menu ul li a:hover{
-        color: black;
     }
 
     #conteudo h1{
